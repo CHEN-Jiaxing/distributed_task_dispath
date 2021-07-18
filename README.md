@@ -3,3 +3,4 @@ mini_project
 
 
 a distributed task dispath system using tendis as storage and use zookeeper to monit the process status and dispath the unfinished tasks
+besides it also supports crash situation and monitor reelection
