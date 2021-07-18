@@ -1,0 +1,1 @@
+g++ work.cpp  -L/usr/local/lib -lzookeeper_mt   ./_tendis_server/redis_op.o ./_file_recovery/re_file.o ./_read_csv/read_csv.o -L./_tendis_server/hiredis-vip -L./_read_csv -lhiredis_vip -lpthread -o work

@@ -1,0 +1,61 @@
+cmake_minimum_required(VERSION 3.11)
+project(_tendis_server)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(.)
+include_directories(hiredis)
+include_directories(hiredis/adapters)
+include_directories(hiredis/examples)
+
+add_executable(_tendis_server
+        hiredis/adapters/ae.h
+        hiredis/adapters/glib.h
+        hiredis/adapters/ivykis.h
+        hiredis/adapters/libev.h
+        hiredis/adapters/libevent.h
+        hiredis/adapters/libuv.h
+        hiredis/adapters/macosx.h
+        hiredis/adapters/qt.h
+        hiredis/examples/example-ae.c
+        hiredis/examples/example-glib.c
+        hiredis/examples/example-ivykis.c
+        hiredis/examples/example-libev.c
+        hiredis/examples/example-libevent-ssl.c
+        hiredis/examples/example-libevent.c
+        hiredis/examples/example-libuv.c
+        hiredis/examples/example-macosx.c
+        hiredis/examples/example-push.c
+        hiredis/examples/example-qt.cpp
+        hiredis/examples/example-qt.h
+        hiredis/examples/example-ssl.c
+        hiredis/examples/example.c
+        hiredis/fuzzing/format_command_fuzzer.c
+        hiredis/alloc.c
+        hiredis/alloc.h
+        hiredis/async.c
+        hiredis/async.h
+        hiredis/async_private.h
+        hiredis/dict.c
+        hiredis/dict.h
+        hiredis/fmacros.h
+        hiredis/hiredis.c
+        hiredis/hiredis.h
+        hiredis/hiredis_ssl.h
+        hiredis/net.c
+        hiredis/net.h
+        hiredis/read.c
+        hiredis/read.h
+        hiredis/sds.c
+        hiredis/sds.h
+        hiredis/sdsalloc.h
+        hiredis/sockcompat.c
+        hiredis/sockcompat.h
+        hiredis/ssl.c
+        hiredis/test.c
+        hiredis/win32.h
+        main.cpp
+        redis_comm.cpp
+        redis_comm.h
+        redis_op.cpp
+        redis_op.h)
